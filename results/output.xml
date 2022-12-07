@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.8.10 on win32)" generated="20221204 13:12:40.694" rpa="false" schemaversion="3">
+<suite id="s1" name="Getbooking" source="D:\Testing Documents\TestAutomation\Restfulbooker\Testcases\getbooking.robot">
+<test id="s1-t1" name="TC001_Validating Status code for get request" line="10">
+<kw name="When Open GET API URL" library="Keywords_GetRequest">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>Get_booking_Details</arg>
+<arg>${Base_Url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20221204 13:12:41.115" level="INFO">Creating Session using : alias=Get_booking_Details, url=https://restful-booker.herokuapp.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20221204 13:12:41.115" endtime="20221204 13:12:41.115"/>
+</kw>
+<status status="PASS" starttime="20221204 13:12:41.115" endtime="20221204 13:12:41.115"/>
+</kw>
+<kw name="Then Validate Status Code" library="Keywords_GetRequest">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>Get_booking_Details</arg>
+<arg>${Pathpara}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20221204 13:12:44.866" level="INFO">GET Request : url=https://restful-booker.herokuapp.com/booking 
+ path_url=/booking 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20221204 13:12:44.882" level="INFO">GET Response : url=https://restful-booker.herokuapp.com/booking 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '895576', 'Etag': 'W/"daa58-cWcXyBaY1tNOCaAnS2B4kSI8pMA"', 'Date': 'Mon, 05 Dec 2022 07:40:40 GMT', 'Via': '1.1 vegur'} 
+ body=[{"bookingid":35022},{"bookingid":36272},{"bookingid":16260},{"bookingid":49033},{"bookingid":11906},{"bookingid":21496},{"bookingid":29791},{"bookingid":27145},{"bookingid":23419},{"bookingid":39608},{"bookingid":23899},{"bookingid":31218},{"bookingid":7361},{"bookingid":45241},{"bookingid":28111},{"bookingid":11554},{"bookingid":41250},{"bookingid":27405},{"bookingid":45239},{"bookingid":36158},{"bookingid":21591},{"bookingid":46049},{"bookingid":40975},{"bookingid":15398},{"bookingid":29131},{"bookingid":12072},{"bookingid":14014},{"bookingid":9779},{"bookingid":35811},{"bookingid":30635},{"bookingid":47374},{"bookingid":47035},{"bookingid":27359},{"bookingid":34924},{"bookingid":24489},{"bookingid":41567},{"bookingid":33407},{"bookingid":50522},{"bookingid":49143},{"bookingid":45879},{"bookingid":36705},{"bookingid":38587},{"bookingid":25853},{"bookingid":4755},{"bookingid":6975},{"bookingid":51312},{"bookingid":44233},{"bookingid":1334},{"bookingid":3896},{"bookingid":8295},{"bookingid":30951},{"bookingid":20834},{"bookingid":11182},{"bookingid":22261},{"bookingid":21982},{"bookingid":44385},{"bookingid":31761},{"bookingid":21333},{"bookingid":29663},{"bookingid":37604},{"bookingid":30440},{"bookingid":23723},{"bookingid":19826},{"bookingid":43984},{"bookingid":45160},{"bookingid":45584},{"bookingid":27986},{"bookingid":41020},{"bookingid":32817},{"bookingid":1799},{"bookingid":4825},{"bookingid":33857},{"bookingid":43179},{"bookingid":45591},{"bookingid":52820},{"bookingid":11415},{"bookingid":40123},{"bookingid":7323},{"bookingid":34050},{"bookingid":858},{"bookingid":50490},{"bookingid":8983},{"bookingid":3456},{"bookingid":7300},{"bookingid":9494},{"bookingid":48010},{"bookingid":18381},{"bookingid":44748},{"bookingid":16663},{"bookingid":29686},{"bookingid":43147},{"bookingid":34459},{"bookingid":2892},{"bookingid":2500},{"bookingid":12235},{"bookingid":28490},{"bookingid":44199},{"bookingid":8120},{"bookingid":19094},{"bookingid":11261},{"bookingid":18179},{"bookingid":28040},{"bookingid":7258},{"bookingid":44881},{"bookingid":41113},{"bookingid":6835},{"bookingid":47519},{"bookingid":3589},{"bookingid":37166},{"bookingid":7528},{"bookingid":32526},{"bookingid":21747},{"bookingid":21888},{"bookingid":35159},{"bookingid":43229},{"bookingid":29850},{"bookingid":3551},{"bookingid":32052},{"bookingid":46779},{"bookingid":30324},{"bookingid":41620},{"bookingid":11529},{"bookingid":5023},{"bookingid":20763},{"bookingid":52724},{"bookingid":4514},{"bookingid":28922},{"bookingid":42840},{"bookingid":31990},{"bookingid":41866},{"bookingid":16225},{"bookingid":10765},{"bookingid":24750},{"bookingid":53295},{"bookingid":45828},{"bookingid":31398},{"bookingid":17002},{"bookingid":8455},{"bookingid":10806},{"bookingid":46775},{"bookingid":23199},{"bookingid":11202},{"bookingid":19608},{"bookingid":41403},{"bookingid":16125},{"bookingid":15761},{"bookingid":35616},{"bookingid":4785},{"bookingid":22037},{"bookingid":43282},{"bookingid":34148},{"bookingid":208},{"bookingid":9708},{"bookingid":30842},{"bookingid":37608},{"bookingid":45569},{"bookingid":32027},{"bookingid":16536},{"bookingid":20464},{"bookingid":1195},{"bookingid":50643},{"bookingid":14987},{"bookingid":4748},{"bookingid":19142},{"bookingid":45236},{"bookingid":15675},{"bookingid":40859},{"bookingid":2507},{"bookingid":11207},{"bookingid":15314},{"bookingid":45183},{"bookingid":44516},{"bookingid":25019},{"bookingid":9323},{"bookingid":47589},{"bookingid":8097},{"bookingid":52818},{"bookingid":24170},{"bookingid":40486},{"bookingid":51472},{"bookingid":9839},{"bookingid":5989},{"bookingid":19490},{"bookingid":42166},{"bookingid":12424},{"bookingid":16230},{"bookingid":45899},{"bookingid":44598},{"bookingid":40401},{"bookingid":21161},{"bookingid":34627},{"bookingid":38086},{"bookingid":45751},{"bookingid":40000},{"bookingid":46147},{"bookingid":22014},{"bookingid":17441},{"bookingid":7351},{"bookingid":48420},{"bookingid":3702},{"bookingid":1872},{"bookingid":24336},{"bookingid":37394},{"bookingid":50912},{"bookingid":51657},{"bookingid":31381},{"bookingid":41586},{"bookingid":37164},{"bookingid":32007},{"bookingid":53266},{"bookingid":37349},{"bookingid":18565},{"bookingid":37139},{"bookingid":28647},{"bookingid":19949},{"bookingid":13884},{"bookingid":28268},{"bookingid":27445},{"bookingid":31748},{"bookingid":9849},{"bookingid":42006},{"bookingid":41205},{"bookingid":12772},{"bookingid":700},{"bookingid":36779},{"bookingid":53198},{"bookingid":40834},{"bookingid":18189},{"bookingid":17642},{"bookingid":26111},{"bookingid":311},{"bookingid":22716},{"bookingid":3219},{"bookingid":19008},{"bookingid":36047},{"bookingid":39305},{"bookingid":5380},{"bookingid":49546},{"bookingid":3437},{"bookingid":18576},{"bookingid":14112},{"bookingid":46584},{"bookingid":39330},{"bookingid":37153},{"bookingid":45249},{"bookingid":13851},{"bookingid":9060},{"bookingid":26593},{"bookingid":38797},{"bookingid":6733},{"bookingid":50221},{"bookingid":25887},{"bookingid":53167},{"bookingid":2529},{"bookingid":32496},{"bookingid":14017},{"bookingid":34517},{"bookingid":21371},{"bookingid":15102},{"bookingid":16969},{"bookingid":1523},{"bookingid":14310},{"bookingid":10574},{"bookingid":40283},{"bookingid":43652},{"bookingid":10916},{"bookingid":37599},{"bookingid":19704},{"bookingid":28404},{"bookingid":20200},{"bookingid":36754},{"bookingid":17241},{"bookingid":6982},{"bookingid":19251},{"bookingid":24841},{"bookingid":6669},{"bookingid":45055},{"bookingid":47373},{"bookingid":6511},{"bookingid":10352},{"bookingid":4571},{"bookingid":50469},{"bookingid":4534},{"bookingid":41061},{"bookingid":9410},{"bookingid":3646},{"bookingid":17820},{"bookingid":45965},{"bookingid":22146},{"bookingid":29173},{"bookingid":38052},{"bookingid":25982},{"bookingid":3287},{"bookingid":43739},{"bookingid":14865},{"bookingid":36649},{"bookingid":34602},{"bookingid":31254},{"bookingid":24452},{"bookingid":23595},{"bookingid":21273},{"bookingid":33048},{"bookingid":27332},{"bookingid":50523},{"bookingid":46036},{"bookingid":14882},{"bookingid":3960},{"bookingid":4754},{"bookingid":1645},{"bookingid":8094},{"bookingid":28891},{"bookingid":5926},{"bookingid":34310},{"bookingid":7885},{"bookingid":19089},{"bookingid":31323},{"bookingid":51492},{"bookingid":44018},{"bookingid":30996},{"bookingid":18252},{"bookingid":26446},{"bookingid":30916},{"bookingid":27325},{"bookingid":16902},{"bookingid":39200},{"bookingid":41132},{"bookingid":25182},{"bookingid":5041},{"bookingid":29342},{"bookingid":48399},{"bookingid":21922},{"bookingid":37552},{"bookingid":28936},{"bookingid":31021},{"bookingid":7196},{"bookingid":34545},{"bookingid":3552},{"bookingid":33596},{"bookingid":1052},{"bookingid":33035},{"bookingid":20510},{"bookingid":34007},{"bookingid":35450},{"bookingid":37613},{"bookingid":6195},{"bookingid":22172},{"bookingid":3676},{"bookingid":52621},{"bookingid":5156},{"bookingid":42345},{"bookingid":42886},{"bookingid":20000},{"bookingid":25666},{"bookingid":47153},{"bookingid":10340},{"bookingid":38492},{"bookingid":39183},{"bookingid":12574},{"bookingid":40081},{"bookingid":18302},{"bookingid":33038},{"bookingid":46838},{"bookingid":22827},{"bookingid":21373},{"bookingid":47315},{"bookingid":1551},{"bookingid":49791},{"bookingid":2067},{"bookingid":33096},{"bookingid":18893},{"bookingid":16834},{"bookingid":23544},{"bookingid":2900},{"bookingid":16320},{"bookingid":46809},{"bookingid":17246},{"bookingid":9873},{"bookingid":27101},{"bookingid":22043},{"bookingid":24347},{"bookingid":35444},{"bookingid":51531},{"bookingid":47484},{"bookingid":36507},{"bookingid":4730},{"bookingid":35511},{"bookingid":11169},{"bookingid":52146},{"bookingid":5865},{"bookingid":49995},{"bookingid":41746},{"bookingid":27688},{"bookingid":38969},{"bookingid":9793},{"bookingid":32797},{"bookingid":31032},{"bookingid":2805},{"bookingid":40694},{"bookingid":22670},{"bookingid":7621},{"bookingid":48857},{"bookingid":33279},{"bookingid":52485},{"bookingid":49189},{"bookingid":8519},{"bookingid":14219},{"bookingid":22266},{"bookingid":20719},{"bookingid":47759},{"bookingid":49843},{"bookingid":35393},{"bookingid":40028},{"bookingid":27266},{"bookingid":43143},{"bookingid":1528},{"bookingid":15702},{"bookingid":14163},{"bookingid":40422},{"bookingid":20697},{"bookingid":20225},{"bookingid":48467},{"bookingid":45265},{"bookingid":36802},{"bookingid":17074},{"bookingid":26496},{"bookingid":47051},{"bookingid":1407},{"bookingid":15876},{"bookingid":19950},{"bookingid":19813},{"bookingid":17759},{"bookingid":29389},{"bookingid":52747},{"bookingid":10842},{"bookingid":47625},{"bookingid":27796},{"bookingid":30726},{"bookingid":11039},{"bookingid":29643},{"bookingid":17373},{"bookingid":17346},{"bookingid":10601},{"bookingid":21585},{"bookingid":35065},{"bookingid":13301},{"bookingid":23470},{"bookingid":20205},{"bookingid":48470},{"bookingid":38203},{"bookingid":29263},{"bookingid":372},{"bookingid":18804},{"bookingid":9584},{"bookingid":24042},{"bookingid":21381},{"bookingid":51549},{"bookingid":49184},{"bookingid":53053},{"bookingid":38780},{"bookingid":12055},{"bookingid":28229},{"bookingid":19395},{"bookingid":4855},{"bookingid":12148},{"bookingid":11006},{"bookingid":40905},{"bookingid":35566},{"bookingid":7308},{"bookingid":46781},{"bookingid":37396},{"bookingid":24189},{"bookingid":51123},{"bookingid":10802},{"bookingid":10092},{"bookingid":5220},{"bookingid":37764},{"bookingid":15024},{"bookingid":1997},{"bookingid":47535},{"bookingid":47651},{"bookingid":43929},{"bookingid":33925},{"bookingid":24871},{"bookingid":28082},{"bookingid":19409},{"bookingid":42917},{"bookingid":41256},{"bookingid":43827},{"bookingid":6926},{"bookingid":37689},{"bookingid":6522},{"bookingid":28060},{"bookingid":33231},{"bookingid":50027},{"bookingid":50962},{"bookingid":10295},{"bookingid":53185},{"bookingid":23514},{"bookingid":15715},{"bookingid":49090},{"bookingid":25119},{"bookingid":15423},{"bookingid":3447},{"bookingid":41575},{"bookingid":31... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20221204 13:12:44.882" level="INFO">c:\users\sony\appdata\local\programs\python\python38\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20221204 13:12:44.882" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20221204 13:12:41.115" endtime="20221204 13:12:44.882"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${Status_Code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20221204 13:12:44.882" level="INFO">${Status_Code} = 200</msg>
+<status status="PASS" starttime="20221204 13:12:44.882" endtime="20221204 13:12:44.882"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Status_Code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221204 13:12:44.882" endtime="20221204 13:12:44.882"/>
+</kw>
+<status status="PASS" starttime="20221204 13:12:41.115" endtime="20221204 13:12:44.882"/>
+</kw>
+<doc>Validate Status code for get request, Expected is Pass</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20221204 13:12:41.115" endtime="20221204 13:12:44.882"/>
+</test>
+<test id="s1-t2" name="TC002_Validating Specific String for get request" line="16">
+<kw name="When Open GET API URL" library="Keywords_GetRequest">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>Get_booking_Details</arg>
+<arg>${Base_Url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20221204 13:12:44.882" level="INFO">Creating Session using : alias=Get_booking_Details, url=https://restful-booker.herokuapp.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20221204 13:12:44.882" endtime="20221204 13:12:44.882"/>
+</kw>
+<status status="PASS" starttime="20221204 13:12:44.882" endtime="20221204 13:12:44.882"/>
+</kw>
+<kw name="Then Validate specific string in the json" library="Keywords_GetRequest">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>Get_booking_Details</arg>
+<arg>${Pathpara}/35987</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20221204 13:12:45.934" level="INFO">GET Request : url=https://restful-booker.herokuapp.com/booking/35987 
+ path_url=/booking/35987 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20221204 13:12:45.934" level="INFO">GET Response : url=https://restful-booker.herokuapp.com/booking/35987 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '169', 'Etag': 'W/"a9-pLno4M4jARCCH8k0BsLT0ALMqUE"', 'Date': 'Mon, 05 Dec 2022 07:40:43 GMT', 'Via': '1.1 vegur'} 
+ body={"firstname":"John","lastname":"Smith","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"} 
+ </msg>
+<msg timestamp="20221204 13:12:45.934" level="INFO">c:\users\sony\appdata\local\programs\python\python38\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20221204 13:12:45.934" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20221204 13:12:44.882" endtime="20221204 13:12:45.934"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${Status_Code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20221204 13:12:45.934" level="INFO">${Status_Code} = 200</msg>
+<status status="PASS" starttime="20221204 13:12:45.934" endtime="20221204 13:12:45.934"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${body}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20221204 13:12:45.934" level="INFO">${body} = {"firstname":"John","lastname":"Smith","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}</msg>
+<status status="PASS" starttime="20221204 13:12:45.934" endtime="20221204 13:12:45.934"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body}</arg>
+<arg>John</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20221204 13:12:45.934" endtime="20221204 13:12:45.934"/>
+</kw>
+<status status="PASS" starttime="20221204 13:12:44.882" endtime="20221204 13:12:45.934"/>
+</kw>
+<doc>Validate correct ID and String, expected is Pass</doc>
+<tag>positive</tag>
+<status status="PASS" starttime="20221204 13:12:44.882" endtime="20221204 13:12:45.934"/>
+</test>
+<status status="PASS" starttime="20221204 13:12:40.694" endtime="20221204 13:12:45.950"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Positive</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Getbooking">Getbooking</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
